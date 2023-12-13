@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Coffee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .list h1 {
+            width: 1600px;
+            margin: auto;
+            /* 마진 오토로해서 1600px 맞춰서 가운데 잡힘 */
+
+        }
+
+        .list img {
+            margin-top: 10px;
+            width : 100px;
+            height: 100px;
+        }
+
+        .list {
+            width: 100%;
+            margin: 0 auto;
+            
+            display: flex; /* .list 이름을 불러오고 내용을 display : flex로 불러옴 좌우공백이 없음 */
+            /* justify-content: center; */ /* display: flex가 있을 때 사용 가능 수평정렬 : 가운데 정렬  text align 안됨 해봄 */
+            text-align: center
+            /* 글자 가운데 정렬, 오른쪽 정렬 */
+        }
+        .list div {
+            width: 386px;
+            margin-right: 20px;
+            background-color: beige;
+            
+        }
+        .list div:last-child{margin-right: 0px;}
+        /* 이름 list 안에 div 안에 마지막 (마진오른쪽을 0 줘라) */
+
+    
+        .box {
+            width: 1600px;     /* 의미 : 전체 box 사진모음 크기를 1600px로 제한한다 */
+            margin: 50px auto; /* 의미 : 위아래는 50px 마진을 주고 좌우는 자동 */
+            /* background-color: bisque; */ /* 뒷배경색 처음에 보기위해 적용 */
+            display: flex;
+            
+            justify-content:space-between; /* div 간격 동일하게 조정 마진오토필요없음 끝자르기할필요도없음 */
+            
+        }
+        .box h2 {
+            font-size: 30px;
+            width : 100%;
+        }
+        .box div {
+            width : 386px;
+          /*  background-color: rgb(255, 202, 202); */ /* 첨에확인용으로 적용 */
+           text-align: center;
+        }
+        .box div img{
+            width : 100%; /* 386px 해도 현재기준 결과는 똑같지만 부모의 1600px를 바꾸거나 반응형 웹에서는 자동으로 수동되는게 좋다 그래서 100%로 잡아줌 */
+            height: 386px;
+            object-fit: cover; /* 가로 세로 비율에 맞춰 사진 비율을 조절해줌    단, 일부분이 커팅당함 */
+            display: block;
+            /* 사진과 글자사이 공간을 없애기위해 넣음 */
+        }
+        .box div strong{
+            display: block;
+            /* 인라인을 블럭으로 바꿔줌 인라인은 글자까지만 색을 입히고 블럭은 그 크기까지 다 색을 입혀줌 */
+       
+            color: brown;
+           font-size: 16px;
+           padding : 10px 0; }
+           /* 내부여백 10px 좌우여백 0 */
+           
+           /* margin : 10px 0; */
+           /* 사진과 글자사이 여백 줄려다가 0으로만들어봄*/
+        
+           .box2 {
+            width: 1600px;     /* 의미 : 전체 box 사진모음 크기를 1600px로 제한한다 */
+            margin: 50px auto; /* 의미 : 위아래는 50px 마진을 주고 좌우는 자동 */
+            /* background-color: bisque; */ /* 뒷배경색 처음에 보기위해 적용 */
+            display: flex;
+            
+            justify-content:space-between; /* div 간격 동일하게 조정 마진오토필요없음 끝자르기할필요도없음 */
+            
+        }
+        .box2 div {
+            width : 386px;
+          /*  background-color: rgb(255, 202, 202); */ /* 첨에확인용으로 적용 */
+           text-align: center;
+        }
+        .box2 div img{
+            width : 100%; /* 386px 해도 현재기준 결과는 똑같지만 부모의 1600px를 바꾸거나 반응형 웹에서는 자동으로 수동되는게 좋다 그래서 100%로 잡아줌 */
+            height: 386px;
+            object-fit: cover; /* 가로 세로 비율에 맞춰 사진 비율을 조절해줌    단, 일부분이 커팅당함 */
+            display: block;
+            /* 사진과 글자사이 공간을 없애기위해 넣음 */
+        }
+        .box2 div strong{
+            display: block;
+            /* 인라인을 블럭으로 바꿔줌 인라인은 글자까지만 색을 입히고 블럭은 그 크기까지 다 색을 입혀줌 */
+         
+            color: brown;
+           font-size: 16px;
+           padding : 10px 0; }
+
+        
+    </style>
+</head>
+<body>
+    <h1>dog coffee</h1> <br />
+    <div class="list">
+        <img src="img/dog1.jpg" />
+        <div>COFFEE</div>
+        <div>MENU</div>
+        <div>STORE</div>
+        <div>RESPONSIBILITY</div>
+        <div>STARBUCKS REWARDS</div>
+        <div>CORPORATE SALES</div>
+        <div>WHAT'S NEW</div>
+    </div>
+
+    <div class="box">
+        <div>
+            <h2>크리스마스 시즌한정 메뉴</h2> <br />
+        </div>
+
+    <div>
+        <img src="img/a크리스마스 블론드 로스트 250g.jpg"  alt="크리스마스 블론드 로스트 250g" />
+        <strong>크리스마스 블론드 로스트 250g</strong> <!-- 글자강조하고싶을때 사용함 -->
+    </div>
+
+    <div>
+        <img src="img/b베란다 블렌드 250g.jpg" ait="베란다 블렌드 250g.jpg" />
+        <strong>베란다 블렌드 250g.jpg</strong>
+    </div>
+
+    <div>
+        <img src="img/ab 크리스마스 블렌드 250g.jpg" ait="크리스마스 블렌드 250g" />
+        <strong>크리스마스 블렌드 250g</strong>
+
+    </div>
+
+    <div>
+        <img src="img/abc 크리스마스 블랜드 에스프레소 로스트 250g.jpg" ait="크리스마스 블랜드 에스프레소 로스트 250g" />
+        <strong>크리스마스 블랜드 에스프레소 250g</strong>
+    </div> 
+
+</div> <!-- .box end -->
+
+<div class="box2">
+
+    <div>
+        <img src="img/c에티오피아 250g.jpg"  alt="에티오피아 250g" />
+        <strong>에티오피아 250g</strong> <!-- 글자강조하고싶을때 사용함 -->
+    </div>
+
+    <div>
+        <img src="img/d 디카페인 하우스 블렌드 250g.jpg" ait="디카페인 하우스 블렌드 250g" />
+        <strong>디카페인 하우스 블렌드 250g</strong>
+    </div>
+
+    <div>
+        <img src="img/e콜롬피아 250g.jpg" ait="콜롬피아 250g" />
+        <strong>콜롬피아 250g</strong>
+
+    </div>
+
+    <div>
+        <img src="img/f 파이크 플레이스 로스트 250g.jpg" ait="파이크 플레이스 로스트 250g" />
+        <strong>파이크 플레이스 로스트 250g</strong>
+    </div> 
+
+</div> <!-- .box2 end -->
+    
+    
+    
+</body>
+</html>
